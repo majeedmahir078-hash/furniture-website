@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Nice Furniture</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Nice Furniture
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="cart.html" class="cart-link">
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+
+                <button
+                    class="menu-btn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================== CHECKOUT HEADER ==================== -->
+
+    <main>
+
+        <section class="checkout-header">
+
+            <div class="container">
+
+                <p class="section-label">
+                    SECURE CHECKOUT
+                </p>
+
+                <h1>Complete Your Order</h1>
+
+                <p>
+                    Enter your information below to complete
+                    your furniture order.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== CHECKOUT ==================== -->
+
+        <section class="checkout">
+
+            <div class="container">
+
+                <div class="checkout-layout">
+
+
+                    <!-- CUSTOMER INFORMATION -->
+
+                    <div class="checkout-form-container">
+
+                        <div class="checkout-section-heading">
+
+                            <p class="checkout-number">
+                                01
+                            </p>
+
+                            <h2>Customer Information</h2>
+
+                            <p>
+                                Please enter your information
+                                for delivery.
+                            </p>
+
+                        </div>
+
+
+                        <form id="checkout-form">
+
+
+                            <!-- NAME + EMAIL -->
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="full-name">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="full-name"
+                                        name="fullName"
+                                        placeholder="Your full name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="your@email.com"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Your phone number"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- ADDRESS -->
+
+                            <div class="form-group">
+
+                                <label for="address">
+                                    Delivery Address
+                                </label>
+
+                                <textarea
+                                    id="address"
+                                    name="address"
+                                    rows="4"
+                                    placeholder="Enter your complete delivery address"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- CITY + COUNTRY -->
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="city">
+                                        City
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        placeholder="Your city"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="country">
+                                        Country
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="country"
+                                        name="country"
+                                        placeholder="Your country"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PAYMENT -->
+
+                            <div class="checkout-payment">
+
+                                <div class="checkout-section-heading">
+
+                                    <p class="checkout-number">
+                                        02
+                                    </p>
+
+                                    <h2>Payment Method</h2>
+
+                                </div>
+
+
+                                <div class="payment-option">
+
+                                    <input
+                                        type="radio"
+                                        id="cash-payment"
+                                        name="payment"
+                                        value="cash"
+                                        checked
+                                    >
+
+                                    <label for="cash-payment">
+
+                                        <span class="payment-title">
+                                            Cash on Delivery
+                                        </span>
+
+                                        <span class="payment-description">
+                                            Pay when your furniture is delivered.
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PLACE ORDER -->
+
+                            <button
+                                type="submit"
+                                class="place-order-btn"
+                            >
+                                Place Order
+                            </button>
+
+
+                            <p
+                                id="checkout-message"
+                                class="checkout-message"
+                            ></p>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- ORDER SUMMARY -->
+
+                    <aside class="checkout-summary">
+
+                        <div class="checkout-section-heading">
+
+                            <p class="checkout-number">
+                                03
+                            </p>
+
+                            <h2>Your Order</h2>
+
+                        </div>
+
+
+                        <!-- JavaScript will insert products here -->
+
+                        <div id="checkout-items">
+                            <!-- Cart products -->
+                        </div>
+
+
+                        <!-- SUMMARY -->
+
+                        <div class="checkout-summary-details">
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <span id="checkout-subtotal">
+                                    $0
+                                </span>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Shipping
+                                </span>
+
+                                <span>
+                                    Free
+                                </span>
+
+                            </div>
+
+
+                            <div class="summary-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <span id="checkout-total">
+                                    $0
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="cart.html"
+                            class="back-to-cart"
+                        >
+                            ← Back to Cart
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo"
+                    >
+                        Nice Furniture
+                    </a>
+
+                    <p>
+                        Thoughtfully designed furniture for
+                        beautiful, comfortable spaces.
+                    </p>
+
+                    <a
+                        href="shop.html"
+                        class="footer-shop-link"
+                    >
+                        Explore Collection →
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Shop</h3>
+
+                    <a href="shop.html">
+                        All Products
+                    </a>
+
+                    <a href="shop.html?category=chairs">
+                        Chairs
+                    </a>
+
+                    <a href="shop.html?category=sofas">
+                        Sofas
+                    </a>
+
+                    <a href="shop.html?category=tables">
+                        Tables
+                    </a>
+
+                    <a href="shop.html?category=beds">
+                        Beds
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Company</h3>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="cart.html">
+                        Shopping Cart
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column footer-contact">
+
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        Have a question about our furniture?
+                    </p>
+
+                    <a href="contact.html">
+                        Contact our team →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Nice Furniture. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="javaScript/products.js"></script>
+    <script src="javaScript/main.js"></script>
+    <script src="javaScript/checkout.js"></script>
+
+</body>
+
+</html>
